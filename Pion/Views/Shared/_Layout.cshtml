@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Pion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Pion.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://kit.fontawesome.com/41c8b474e2.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- New Header -->
+    <header>
+        <div class="header-container">
+            <div class="box1">
+                <!-- Logo and Brand -->
+                <a href="/" class="logo-size">
+                    <img src="/images/PionLogo.png" alt="" class="logo">
+                </a>
+            </div>
+            <div class="box2">
+                <!-- Navigation Links -->
+                <nav class="nav-links">
+                    <div><a href="/">VI ERBJUDER</a></div>
+                    <div><a href="/products">VÅRT TÄNK</a></div>
+                    <div><a href="/contact">KONTAKT</a></div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="content-container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- New Footer -->
+    <footer>
+        <div class="footer">
+            <p>Copyright &copy; Alla rättigheter förbehållna</p>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>

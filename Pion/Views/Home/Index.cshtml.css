@@ -1,0 +1,140 @@
+﻿.image-container {
+    position: relative;
+    text-align: center;
+    width: 100%; /* Anpassa bredden efter behov */
+}
+
+
+    .image-container img {
+        width: 83%; /* Bilden fyller hela behållarens bredd */
+    }
+
+.text-overlay {
+    position: absolute;
+    top: 26rem;
+    left: 43%;
+    transform: translateX(-50%);
+    color: white; /* Vit text för att synas över bilden */
+    padding: 20px;
+    width: 100%;
+   
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 100px;
+}
+h6 {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: "DM Serif Text", serif;
+    font-weight:bold;
+}
+
+h5 {
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: "DM Serif Text", serif;
+}
+
+/*part2*/
+.part2 {
+    margin-top:50px;
+    background-color: rgba(102,115,113,1);
+    border-color: rgba(255,255,255,1);
+    border-style: none;
+    border-width: 1px 1px 1px 1px;
+    min-height: 1681px;
+    padding-bottom: 100px;
+}
+
+.part2Containar {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:16rem;
+    margin-right:10rem;
+}
+
+.part2ImageContainer {
+    margin-top: 4rem;
+    min-height: 652px;
+    width: 605px;
+    float: left
+}
+
+.part2text {
+    color: #fff;
+    margin: -10px 100px 100px 100px;
+
+}
+
+.part2text h2 {
+    font-size:40px;
+    font-weight:unset;
+}
+
+.part2border {
+    border: 1px solid black;
+    width: 67rem;
+    margin:-60px auto 0 auto;
+}
+
+.part3 {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+}
+
+.imgBackground {
+    display: flex;
+    background-repeat: repeat-x;
+    background-position: 100% 100%;
+    background-size: contain;
+    background-attachment: scroll;
+    opacity: 0.11;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+    .imgBackground img {
+        max-width: 60rem;
+        height: 50rem;
+        display: block;
+    }
+.part3texts {
+    margin-top:5rem;
+    max-width: 50%;
+    margin-left: 2rem;
+    justify-content: start;
+    position: absolute;
+    color: white;
+    opacity: 1;
+    z-index: 1;
+}
+
+/*.part3 h3 {
+    margin-left: 2rem;
+    justify-content: start;
+    position: absolute;
+    color: white;
+    opacity: 1;
+    z-index: 1;
+}*/
+
+.part3 p {
+    margin-top: 8rem;
+    margin-left: 2rem;
+    justify-content: start;
+    position: absolute;
+    color: white;
+    opacity: 1;
+    z-index: 1;
+    max-width: 30%;
+}
+
+
