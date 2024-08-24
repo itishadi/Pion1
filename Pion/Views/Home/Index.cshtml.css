@@ -117,15 +117,6 @@ h5 {
     z-index: 1;
 }
 
-/*.part3 h3 {
-    margin-left: 2rem;
-    justify-content: start;
-    position: absolute;
-    color: white;
-    opacity: 1;
-    z-index: 1;
-}*/
-
 .part3 p {
     margin-top: 8rem;
     margin-left: 2rem;
@@ -134,7 +125,28 @@ h5 {
     color: white;
     opacity: 1;
     z-index: 1;
-    max-width: 30%;
+    max-width: 31%;
+    font-size:17px;
+    font-weight:400;
 }
 
+.part3 span {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.container1 {
+    width: 416px;
+    min-height: 59px;
+    margin-top: 119px;
+    margin-left: 155px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #3c3c3c;
+}
+    .container1 span {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+/*card*/
 
