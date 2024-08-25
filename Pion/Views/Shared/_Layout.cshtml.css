@@ -1,4 +1,4 @@
-﻿.header-container {
+﻿/*.header-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -40,9 +40,130 @@
         font-family: Manrope, Open Sans, Helvetica Neue, Helvetica, "sans-serif";
         text-transform: uppercase;
         text-align: left;
+    }*/
+
+
+
+/* Grundläggande stil för desktop */
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 92px;
+    width: 162px;
+}
+
+.box1 {
+    margin-left: -1rem;
+}
+
+.box2 {
+    min-height: 96px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 16rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+    .nav-links a {
+        color: #3c3c3c;
+        border-style: none;
+        border-width: 0;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Manrope, Open Sans, Helvetica Neue, Helvetica, "sans-serif";
+        text-transform: uppercase;
+        text-align: left;
     }
 
-.footer {
+/* För skärmar upp till 1024px (t.ex. större tablets) */
+@media (max-width: 1024px) {
+    .box2 {
+        margin-left: 8rem;
+        width: auto;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+}
+
+/* För skärmar upp till 768px (t.ex. tablets) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .box1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .box2 {
+        width: 50%;
+        margin-left: 16rem;
+        margin-top:-6rem;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+/* För skärmar upp till 480px (t.ex. mobiltelefoner) */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        height: 70px;
+        width: 120px;
+    }
+
+    .box1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .box2 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 14px;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+
+/*.footer {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -61,3 +182,65 @@
     .footer p {
         margin-left: 220px;
     }
+*/
+/* Grundläggande stil för desktop */
+.footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(235, 200, 152, 1);
+    min-height: 75px;
+    font-family: Manrope, Open Sans, Helvetica Neue, Helvetica, "sans-serif";
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3c3c3c;
+    letter-spacing: normal;
+    line-height: 1.8;
+    padding: 0 2rem; 
+}
+
+    .footer p {
+        margin-left: 220px;
+    }
+
+/* För skärmar upp till 1024px (större tablets) */
+@media (max-width: 1024px) {
+    .footer {
+        justify-content: center; /* Centrera innehållet på mindre skärmar */
+        padding: 0 1rem;
+    }
+
+        .footer p {
+            margin-left: 0;
+            text-align: center;
+        }
+}
+
+/* För skärmar upp till 768px (tablets och stora mobiler) */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+        .footer p {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+}
+
+/* För skärmar upp till 480px (små mobiltelefoner) */
+@media (max-width: 480px) {
+    .footer {
+        font-size: 14px; /* Minska textstorleken för små skärmar */
+        padding: 0.5rem;
+    }
+
+        .footer p {
+            margin-left: 0;
+            margin-top: 0.5rem;
+        }
+}

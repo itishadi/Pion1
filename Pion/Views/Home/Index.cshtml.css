@@ -1,38 +1,4 @@
-﻿/*.image-container {
-    position: relative;
-    text-align: center;
-    width: 100%;*/ /* Anpassa bredden efter behov */
-/*}
-
-
-    .image-container img {
-        width: 83%; 
-    }
-
-.text-overlay {
-    position: absolute;
-    top: 23rem;
-    left: 43%;
-    transform: translateX(-50%);
-    color: white; 
-    padding: 20px;
-    width: 100%;
-   
-}
-
-    .text-overlay span {
-        font-weight: bold;
-        font-size: 100px;
-    }
-    .text-overlay p {
-        font-style: normal;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: normal;
-        font-family: "DM Serif Text", serif;
-    }*/
-
-.image-container {
+﻿.image-container {
     position: relative;
     text-align: center;
     width: 100%; /* Full width container */
@@ -97,7 +63,7 @@
         }
 
         .text-overlay p {
-            font-size: 10px;
+            font-size: 14px;
         }
 }
 
@@ -117,44 +83,7 @@
 
 
 
-
-
-/*part2*/
-/*.part2 {
-    margin-top: 50px;
-    background-color: rgba(102,115,113,1);
-    border-color: rgba(255,255,255,1);
-    border-style: none;
-    border-width: 1px 1px 1px 1px;
-    min-height: 1681px;
-    padding-bottom: 100px;
-}
-
-.part2Containar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 16rem;
-    margin-right: 10rem;
-}
-
-.part2ImageContainer {
-    margin-top: 4rem;
-    min-height: 652px;
-    width: 605px;
-    float: left
-}
-
-.part2text {
-    color: #fff;
-    margin: -10px 100px 100px 100px;
-}
-
-    .part2text h2 {
-        font-size: 40px;
-        font-weight: unset;
-    }
-*/
+/*part 2*/
 
 .part2 {
     margin-top: 50px;
@@ -193,7 +122,6 @@
 
 /* Media Queries */
 
-/* Tablets and small desktops */
 @media (max-width: 1200px) {
     .part2Containar {
         margin-left: 8rem;
@@ -216,43 +144,43 @@
 
 @media (max-width: 768px) {
     .part2 {
-        padding-bottom: 50px; /* Adjust bottom padding for smaller screens */
-        margin-top: 30px; /* Reduce top margin for better spacing */
-        min-height: auto; /* Allow the height to adjust naturally */
+        padding-bottom: 50px; 
+        margin-top: 30px; 
+        min-height: auto;
     }
 
     .part2Containar {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        margin-left: 10rem; /* Reduce side margins for tablets */
-        margin-right: 10rem; /* Reduce side margins for tablets */
-        align-items: center; /* Center-align items */
+        flex-direction: column;
+        margin-left: 10rem; 
+        margin-right: 10rem; 
+        align-items: center; 
     }
 
     .part2ImageContainer {
-        width: 100%; /* Full width to fit container */
-        min-height: 400px; /* Ensure minimum height is suitable for tablets */
-        margin: 20px auto; /* Center the image container with spacing */
+        width: 100%; 
+        min-height: 400px; 
+        margin: 20px auto;
     }
 
         .part2ImageContainer img {
-            max-width: 100%; /* Ensure image scales within its container */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 100%;
+            height: auto; 
         }
 
     .part2text {
-        margin: 20px 0; /* Adjust margin for text block */
-        text-align: center; /* Center text alignment for better readability */
+        margin: 20px 0;
+        text-align: center;
     }
 
         .part2text h2 {
-            font-size: 24px; /* Slightly smaller font size for better fit */
-            margin: 0 0 20px 0; /* Margin adjustments for heading */
+            font-size: 24px;
+            margin: 0 0 20px 0; 
         }
 
         .part2text p {
-            font-size: 18px; /* Adjust font size for paragraphs */
-            line-height: 1.6; /* Improve line spacing for readability */
-            margin-bottom: 15px; /* Margin between paragraphs */
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px; 
         }
 }
 
@@ -284,16 +212,7 @@
         }
 }
 
-
-
-
-
-
-
-
-
-
-
+/*border*/
 .part2border {
     border: 1px solid black;
     width: 67rem;
@@ -303,7 +222,7 @@
 /*part 3*/
 .part3 {
     display: flex;
-    justify-content: center; /* Centrerar horisontellt */
+    justify-content: center; 
 }
 
 .imgBackground {
@@ -352,21 +271,6 @@
     font-size: 1.5em;
     font-weight: 400;
 }
-
-.container1 {
-    width: 416px;
-    min-height: 59px;
-    margin-top: 119px;
-    margin-left: 155px;
-    font-size: 40px;
-    font-family: Verdana, Geneva, sans-serif;
-    color: #3c3c3c;
-}
-
-    .container1 span {
-        font-size: 40px;
-        font-weight: 400;
-    }
 
     @media (max-width: 1200px){
         .imgBackground img {
@@ -435,5 +339,18 @@
     }
 }
 
-/*card*/
+/*cards*/
+.container1 {
+   /* width: 416px;
+    min-height: 59px;
+    margin-top: 119px;
+    margin-left: 155px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #3c3c3c;*/
+}
 
+    .container1 span {
+      /*  font-size: 40px;
+        font-weight: 400;*/
+    }
