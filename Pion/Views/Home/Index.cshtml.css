@@ -1,49 +1,127 @@
-﻿.image-container {
+﻿/*.image-container {
     position: relative;
     text-align: center;
-    width: 100%; /* Anpassa bredden efter behov */
-}
+    width: 100%;*/ /* Anpassa bredden efter behov */
+/*}
 
 
     .image-container img {
-        width: 83%; /* Bilden fyller hela behållarens bredd */
+        width: 83%; 
     }
 
 .text-overlay {
     position: absolute;
-    top: 26rem;
+    top: 23rem;
     left: 43%;
     transform: translateX(-50%);
-    color: white; /* Vit text för att synas över bilden */
+    color: white; 
     padding: 20px;
     width: 100%;
    
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 100px;
-}
-h6 {
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: normal;
-    font-family: "DM Serif Text", serif;
-    font-weight:bold;
+    .text-overlay span {
+        font-weight: bold;
+        font-size: 100px;
+    }
+    .text-overlay p {
+        font-style: normal;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: normal;
+        font-family: "DM Serif Text", serif;
+    }*/
+
+.image-container {
+    position: relative;
+    text-align: center;
+    width: 100%; /* Full width container */
 }
 
-h5 {
-    font-style: normal;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: normal;
-    font-family: "DM Serif Text", serif;
+    .image-container img {
+        width: 98%; /* Image width */
+    }
+
+.text-overlay {
+    position: absolute;
+    top: 23rem;
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center; /* Center text */
 }
+
+    .text-overlay span {
+        font-weight: bold;
+        font-size: 100px;
+    }
+
+    .text-overlay p {
+        font-style: normal;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: normal;
+        font-family: "DM Serif Text", serif;
+    }
+
+/* Responsive styles for mobile and tablets */
+
+@media (max-width: 1024px) {
+    .image-container img {
+        width: 100%; /* Adjust image width for 1024x440 screens */
+    }
+
+    .text-overlay {
+        top: 10rem; /* Adjust the vertical position for 1024x440 screens */
+        left: 50%;
+    }
+
+        .text-overlay span {
+            font-size: 60px; /* Adjust the font size for 1024x440 screens */
+        }
+
+        .text-overlay p {
+            font-size: 18px; /* Adjust the paragraph font size for 1024x440 screens */
+        }
+}
+
+@media (max-width: 768px) {
+    .text-overlay {
+        top: 10rem;
+    }
+
+        .text-overlay span {
+            font-size: 30px;
+        }
+
+        .text-overlay p {
+            font-size: 10px;
+        }
+}
+
+@media (max-width: 576px) {
+    .text-overlay {
+        top: 2rem;
+    }
+
+        .text-overlay span {
+            font-size: 18px;
+        }
+
+        .text-overlay p {
+            font-size: 10px;
+        }
+}
+
+
+
+
 
 /*part2*/
-.part2 {
-    margin-top:50px;
+/*.part2 {
+    margin-top: 50px;
     background-color: rgba(102,115,113,1);
     border-color: rgba(255,255,255,1);
     border-style: none;
@@ -54,10 +132,10 @@ h5 {
 
 .part2Containar {
     display: flex;
-    justify-content:center;
-    align-items:center;
-    margin-left:16rem;
-    margin-right:10rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16rem;
+    margin-right: 10rem;
 }
 
 .part2ImageContainer {
@@ -70,20 +148,159 @@ h5 {
 .part2text {
     color: #fff;
     margin: -10px 100px 100px 100px;
-
 }
 
-.part2text h2 {
-    font-size:40px;
-    font-weight:unset;
+    .part2text h2 {
+        font-size: 40px;
+        font-weight: unset;
+    }
+*/
+
+.part2 {
+    margin-top: 50px;
+    background-color: rgba(102,115,113,1);
+    border-color: rgba(255,255,255,1);
+    border-style: none;
+    border-width: 1px 1px 1px 1px;
+    min-height: 1681px;
+    padding-bottom: 100px;
 }
+
+.part2Containar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14rem;
+    margin-right: 10rem;
+}
+
+.part2ImageContainer {
+    margin-top: 4rem;
+    min-height: 652px;
+    width: 405px;
+    float: left;
+}
+
+.part2text {
+    color: #fff;
+    margin: -10px 100px 100px 100px;
+}
+
+    .part2text h2 {
+        font-size: 40px;
+        font-weight: unset;
+    }
+
+/* Media Queries */
+
+/* Tablets and small desktops */
+@media (max-width: 1200px) {
+    .part2Containar {
+        margin-left: 8rem;
+        margin-right: 6rem;
+    }
+
+    .part2ImageContainer {
+        width: 500px;
+    }
+
+    .part2text {
+        margin: -10px 50px 50px 50px;
+    }
+
+        .part2text h2 {
+            font-size: 28px;
+        }
+}
+
+
+@media (max-width: 768px) {
+    .part2 {
+        padding-bottom: 50px; /* Adjust bottom padding for smaller screens */
+        margin-top: 30px; /* Reduce top margin for better spacing */
+        min-height: auto; /* Allow the height to adjust naturally */
+    }
+
+    .part2Containar {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        margin-left: 10rem; /* Reduce side margins for tablets */
+        margin-right: 10rem; /* Reduce side margins for tablets */
+        align-items: center; /* Center-align items */
+    }
+
+    .part2ImageContainer {
+        width: 100%; /* Full width to fit container */
+        min-height: 400px; /* Ensure minimum height is suitable for tablets */
+        margin: 20px auto; /* Center the image container with spacing */
+    }
+
+        .part2ImageContainer img {
+            max-width: 100%; /* Ensure image scales within its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+    .part2text {
+        margin: 20px 0; /* Adjust margin for text block */
+        text-align: center; /* Center text alignment for better readability */
+    }
+
+        .part2text h2 {
+            font-size: 24px; /* Slightly smaller font size for better fit */
+            margin: 0 0 20px 0; /* Margin adjustments for heading */
+        }
+
+        .part2text p {
+            font-size: 18px; /* Adjust font size for paragraphs */
+            line-height: 1.6; /* Improve line spacing for readability */
+            margin-bottom: 15px; /* Margin between paragraphs */
+        }
+}
+
+/* Mobile devices */
+@media (max-width: 576px){
+    .part2Containar {
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .part2ImageContainer {
+        width: 100%;
+        min-height: 400px;
+        margin: 30px auto;
+    }
+
+        .part2ImageContainer img {
+            max-width: 100%;
+        }
+
+    .part2text {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+        .part2text h2 {
+            font-size: 20px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
 
 .part2border {
     border: 1px solid black;
     width: 67rem;
-    margin:-60px auto 0 auto;
 }
 
+
+/*part 3*/
 .part3 {
     display: flex;
     justify-content: center; /* Centrerar horisontellt */
@@ -106,8 +323,9 @@ h5 {
         height: 50rem;
         display: block;
     }
+
 .part3texts {
-    margin-top:5rem;
+    margin-top: 5rem;
     max-width: 50%;
     margin-left: 2rem;
     justify-content: start;
@@ -126,14 +344,15 @@ h5 {
     opacity: 1;
     z-index: 1;
     max-width: 31%;
-    font-size:17px;
-    font-weight:400;
+    font-size: 17px;
+    font-weight: 400;
 }
 
 .part3 span {
     font-size: 1.5em;
     font-weight: 400;
 }
+
 .container1 {
     width: 416px;
     min-height: 59px;
@@ -143,10 +362,78 @@ h5 {
     font-family: Verdana, Geneva, sans-serif;
     color: #3c3c3c;
 }
+
     .container1 span {
         font-size: 40px;
         font-weight: 400;
     }
+
+    @media (max-width: 1200px){
+        .imgBackground img {
+            max-width: 20rem;
+            height: 35rem;
+        }
+
+        .part3texts {
+            margin-top: 1.5rem;
+            max-width: 50%;
+            margin-left: 0.5rem;
+        }
+
+        .part3 p {
+            margin-top: 4rem;
+            margin-left: 0.5rem;
+            margin-right: 7rem;
+            max-width: 50%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+@media (max-width: 768px) {
+    .imgBackground img {
+        max-width: 20rem;
+        height: 25rem;
+    }
+
+    .part3texts {
+        margin-top: 1.5rem;
+        max-width: 50%;
+        margin-left: 0.5rem;
+    }
+
+    .part3 p {
+        margin-top: 4rem;
+        margin-left: 0.5rem;
+        margin-right: 7rem;
+        max-width: 50%;
+        font-size: 10px;
+        font-weight: 200;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    .imgBackground img {
+        max-width: 10rem;
+        height: 30rem;
+    }
+    .part3texts {
+        margin-top: 1.5rem;
+        max-width: 50%;
+        margin-left: 0.5rem;
+    }
+
+    .part3 p {
+        margin-top: 4rem;
+        margin-left: 0.5rem;
+        margin-right: 5rem;
+        max-width: 70%;
+        font-size: 10px;
+        font-weight: 200;
+    }
+}
 
 /*card*/
 
