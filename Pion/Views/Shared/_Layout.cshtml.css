@@ -1,50 +1,4 @@
-﻿/*.header-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.logo {
-    height: 92px;
-    width: 162px;
-}
-
-.box1 {
-    margin-left: -1rem;
-}
-
-.box2 {
-    min-height: 96px;
-    width: 400px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: 16rem;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
-
-    .nav-links a {
-        color: #3c3c3c;
-        border-style: none;
-        border-width: 0;
-        font-size: 16px;
-        font-weight: 400;
-        font-style: normal;
-        text-decoration: none;
-        font-family: Manrope, Open Sans, Helvetica Neue, Helvetica, "sans-serif";
-        text-transform: uppercase;
-        text-align: left;
-    }*/
-
-
-
-/* Grundläggande stil för desktop */
+﻿/* Grundläggande stil för desktop */
 .header-container {
     display: flex;
     justify-content: space-evenly;
@@ -162,27 +116,6 @@
     }
 }
 
-
-/*.footer {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background-color: rgba(235, 200, 152, 1);
-    min-height: 75px;
-    font-family: Manrope, Open Sans, Helvetica Neue, Helvetica, "sans-serif";
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #3c3c3c;
-    letter-spacing: normal;
-    line-height: 1.8;
-}
-
-    .footer p {
-        margin-left: 220px;
-    }
-*/
 /* Grundläggande stil för desktop */
 .footer {
     display: flex;
@@ -198,6 +131,7 @@
     letter-spacing: normal;
     line-height: 1.8;
     padding: 0 2rem; 
+    margin-bottom:-100px;
 }
 
     .footer p {

@@ -123,6 +123,9 @@
 /* Media Queries */
 
 @media (max-width: 1200px) {
+    .part2 {
+        min-height: 1200px;
+    }
     .part2Containar {
         margin-left: 8rem;
         margin-right: 6rem;
@@ -340,17 +343,556 @@
 }
 
 /*cards*/
+
 .container1 {
-   /* width: 416px;
-    min-height: 59px;
-    margin-top: 119px;
-    margin-left: 155px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto; /* Centrera container horisontellt */
     font-size: 40px;
     font-family: Verdana, Geneva, sans-serif;
-    color: #3c3c3c;*/
+    color: #3c3c3c;
+    max-width: 90%; /* Anpassa bredden för att vara responsiv */
+    text-align: center; /* Centrera texten inom containern */
 }
 
-    .container1 span {
-      /*  font-size: 40px;
-        font-weight: 400;*/
+@media (max-width: 1024px) {
+    .container1 {
+        font-size: 32px; /* Minska textstorleken för större tablets och små desktops */
+        margin-left: 1rem;
+        margin-right: 1rem; /* Minska marginalerna på mindre skärmar */
     }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        font-size: 24px; /* Minska textstorleken för tablets */
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem; /* Justera marginalerna för tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        font-size: 20px; /* Minska textstorleken för mobiltelefoner */
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem; /* Justera marginalerna för mobiltelefoner */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Galleri */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-cell {
+    width: calc(25% - 20px); /* Justera procentandel för mindre kort */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+
+.img-container {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* Ändra proportionellt för att göra bilden mindre */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(60,60,60,1); /* Kantlinje runt bilderna */
+    box-sizing: border-box;
+}
+
+    .img-container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Behåll proportioner och centrera */
+        transform: translate(-50%, -50%); /* Centrera bilden */
+        }
+  
+.gallery-caption {
+    text-align: left;
+    
+    color: #3c3c3c;
+    font-family: Manrope, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Bakgrundsfärg för läsbarhet */
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Ljusbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Ensures clicking outside the lightbox content doesn't close the lightbox */
+.lightbox:not(.lightbox-content) {
+    cursor: pointer;
+}
+
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    margin: auto;
+}
+
+.lightbox-caption {
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsiv design */
+@media (max-width: 1024px) {
+    .gallery-cell {
+        width: calc(33.333% - 20px); /* För mindre skärmar, justera bredden */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-cell {
+        width: calc(50% - 20px); /* För små skärmar, justera bredden */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-cell {
+        width: 100%; /* För mycket små skärmar, gör korten fullbredd */
+    }
+}
+
+
+
+
+/* Grundläggande stil för galleriet */
+/*.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);*/ /* Tre kolumner */
+   /*justify-content:center;
+    gap: 2rem;*/ /* Avstånd mellan korten */
+    /*padding: 1rem;
+    max-width: 1000px;*/ /* Maximal bredd på galleriet */
+    /*margin: 0 auto;*/ /* Centera galleriet horisontellt */
+/*}*/
+
+/* Grundläggande stil för produktkortet */
+/*.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;*/ /* Maximal bredd på kortet */
+    /*padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;*/ /* Standardhöjd */
+    /*object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-title {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #000;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .buy-button:hover {
+        background-color: #0056b3;
+    }*/
+
+/* Responsiv design */
+/*@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);*/ /* Två kolumner på mindre skärmar */
+        /*justify-content: center;
+    }
+
+    .product-card {
+        margin: 0 auto;*/ /* Justera max-bredden för mindre skärmar */
+    /*}
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; 
+        justify-content: center; 
+    }
+
+    .product-card {
+        margin: 0 auto;
+    }
+}*/
+
+/*contact*/
+
+.shadowcontact {
+    margin-top: 50px;
+    background-color: rgba(102,115,113,1);
+    border-color: rgba(255,255,255,1);
+    border-style: none;
+    border-width: 1px 1px 1px 1px;
+    min-height: 800px;
+    /*padding-bottom: 100px;*/
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    font-family: Manrope;
+}
+
+.contact-address, .contact-form {
+    flex: 1;
+    margin-left:13rem;
+    color:white;
+    z-index:1;
+}
+
+.contact-address {
+    max-width: 60%;
+}
+.contact-address h2 {
+font-size:41px;
+margin-top:4rem;
+font-weight:400;
+}
+    .contact-address h4 {
+        font-size: 30px;
+        margin-top: 6rem;
+        font-weight: 400;
+    }
+
+
+/* För skärmar upp till 1024px (tabletter) */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center; /* Centrerar innehållet */
+    }
+
+    .contact-address, .contact-form {
+        margin-left: 0; /* Ta bort vänster marginal */
+        max-width: 90%; /* Öka maxbredden */
+        text-align: left; /* Centrera texten */
+    }
+
+        .contact-form p {
+            margin-top:-5rem;
+        }
+
+        .contact-address h2, .contact-address h4 {
+            font-size: 1.5rem; /* Justera storleken på rubrikerna */
+        }
+
+    .contact-form {
+        max-width: 100%; /* Full bredd */
+    }
+}
+
+/* För skärmar upp till 768px (mobiler) */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center; /* Centrerar innehållet */
+        padding: 1rem; /* Mindre padding */
+    }
+
+    .contact-address, .contact-form {
+        margin-left: 0; /* Ta bort vänster marginal */
+        max-width: 100%; /* Full bredd */
+        text-align: left; /* Centrera texten */
+    }
+
+        .contact-address h2, .contact-address h4 {
+            font-size: 1.2rem; /* Justera storleken på rubrikerna */
+            margin-top: 2rem; /* Justera marginaler */
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-top: 0.5rem; /* Justera avstånd mellan fälten */
+        }
+
+        .contact-form button {
+            width: 100%; /* Full bredd på knappen */
+        }
+
+    .social-media {
+        gap: 1rem; /* Minska avståndet mellan ikonerna */
+        margin-left: 0; /* Ta bort vänster marginal */
+    }
+}
+
+/* För skärmar upp till 480px (små mobiler) */
+@media (max-width: 480px) {
+    .contact-address h2, .contact-address h4 {
+        font-size: 1rem; /* Justera storleken på rubrikerna */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 0.5rem; /* Justera padding */
+    }
+
+    .contact-form button {
+        padding: 0.8rem; /* Justera padding på knappen */
+    }
+}
+
+
+
+
+
+
+
+/*icones*/
+.social-media {
+    display: flex;
+    gap: 2rem; /* Avstånd mellan ikonerna */
+    justify-content: center; /* Centera ikonerna horisontellt */
+    margin-left: 3rem;
+    margin-top: 5rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Bredd på ikonen */
+    height: 40px; /* Höjd på ikonen */
+    border-radius: 50%; /* Gör bakgrunden rund */
+    background-color: #fff; /* Vit bakgrund */
+    color: #000; /* Svart ikon */
+    font-size: 18px; /* Storlek på ikonen */
+    text-decoration: none; /* Ta bort understrykning på länken */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    /*.social-icon:hover {
+        background-color: black;*/ /* Bakgrundsfärg på hover */
+        /*color: #fff;*/ /* Ikonfärg på hover */
+    /*}*/
+
+.facebook {
+    background-color: #fff; /* Facebooks blå färg */
+    color: #000; /* Vit ikon */
+}
+
+.instagram {
+    background-color: #fff; /* Instagrams rosa färg */
+    color: #000; /* Vit ikon */
+}
+
+
+
+/* För skärmar upp till 1024px (tabletter) */
+@media (max-width: 1024px) {
+    .social-media {
+        justify-content: left; /* Centrerar ikonerna horisontellt */
+        gap:5rem;
+        margin-left: 0; /* Ta bort vänster marginal */
+        margin-top: 2rem; /* Justera avståndet från övrigt innehåll */
+    }
+}
+
+/* För skärmar upp till 768px (mobiler) */
+@media (max-width: 768px) {
+    .social-media {
+        justify-content: left; /* Centrerar ikonerna horisontellt */
+        margin-top: 1rem; /* Justera avståndet från övrigt innehåll */
+    }
+
+    .social-icon {
+        width: 30px; /* Minska bredden på ikonerna */
+        height: 30px; /* Minska höjden på ikonerna */
+        font-size: 16px; /* Minska storleken på ikonerna */
+    }
+}
+
+/* För skärmar upp till 480px (små mobiler) */
+@media (max-width: 480px) {
+    .social-media {
+        justify-content: left; /* Centrerar ikonerna horisontellt */
+        margin-top: 0.5rem; /* Justera avståndet från övrigt innehåll */
+    }
+
+    .social-icon {
+        width: 25px; /* Ytterligare minska bredden på ikonerna */
+        height: 25px; /* Ytterligare minska höjden på ikonerna */
+        font-size: 14px; /* Ytterligare minska storleken på ikonerna */
+    }
+}
+
+
+
+
+/*form*/
+
+.contact-form {
+    max-width: 470px; /* Maximal bredd på formen */
+}
+    .contact-form p {
+        padding-top:5rem;
+        padding-bottom:3rem;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrerar formulärets innehåll horisontellt */
+    }
+
+    .contact-form label {
+        align-self: flex-start; /* Justerar etiketter till vänster */
+        margin-top: 0.5rem;
+        width: 100%; /* Gör etiketten lika bred som formfälten */
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%; /* Gör input-fälten lika breda som formen */
+        margin-top: 1rem;
+        padding: 0.1rem;
+        border: 1px solid #ddd;
+        /*border-radius: 4px;*/
+    }
+
+    .contact-form button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    color: #fff; /* Vit textfärg */
+    background-color: transparent; /* Ingen bakgrundsfärg */
+    border: 1px solid #fff; /* Vit kantlinje */
+    text-align: center;
+    border-radius: 0;
+    text-decoration: none; /* Ingen understrykning */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+    .btn:hover {
+        background-color: gray; /* Grå bakgrundsfärg vid hover */
+        color: #fff; /* Behåll vit textfärg */
+    }
+
+
+
+

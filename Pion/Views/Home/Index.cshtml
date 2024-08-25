@@ -6,8 +6,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Andra head-element -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
- 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 image-container">
@@ -68,9 +70,9 @@
                 Välkommen att fråga vad vi gör mer!<br>  <br>   <br>
 
                 <span>Även närodlat</span>
-                
+
                 <br> Vi säljer snittblommor och krukväxter från lokala odlare kring
-                Uppsala vid säsong, vi ser fram emot att kunna erbjuda er 
+                Uppsala vid säsong, vi ser fram emot att kunna erbjuda er
                 närodlat av bästa kvalite. Håll utkik i butiken för dessa finingar!
             </p>
         </div>
@@ -82,7 +84,173 @@
 </div>
 <div class="container1">
     <span>Vi erbjuder</span>
-
 </div>
 
 
+
+<div class="gallery">
+    <div class="gallery-cell">
+        <a href="/images/background.png.jpeg" data-caption="Information om bild 1" class="gallery-link">
+            <div class="img-container">
+                <img src="/images/background.png.jpeg" alt="Image Alt Text 1">
+            </div>
+            <p class="gallery-caption">
+                BUTIK<br>
+                Välkommen in i butiken när du vill ha blommor och tillbehör av hög kvalitet, när du vill skicka ett blombud i Uppsala med omnejd, och när du önskar tips och råd eller vill få inspiration.
+            </p>
+        </a>
+    </div>
+
+    <div class="gallery-cell">
+        <a href="/images/part2.png" data-caption="Information om bild 2" class="gallery-link">
+            <div class="img-container">
+                <img src="/images/part2.png" alt="Image Alt Text 2">
+            </div>
+        </a>
+    </div>
+    <div class="gallery-cell">
+        <a href="/images/part2.png" data-caption="Information om bild 2" class="gallery-link">
+            <div class="img-container">
+                <img src="/images/part2.png" alt="Image Alt Text 2">
+            </div>
+        </a>
+    </div>
+   @*  <div class="gallery-cell">
+        <a href="/images/head-background.png" data-caption="Information om bild 1" class="gallery-link">
+            <div class="img-container">
+                <img src="/images/head-background.png" alt="Image Alt Text 1">
+            </div>
+        </a>
+    </div> *@
+
+    <!-- Add more gallery cells as needed -->
+</div>
+
+<!-- Ljusbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Full-size image">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+</div>
+
+<script src="../Views/Home/Index.cshtml.js"></script>
+
+
+
+@* <div class="gallery">
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="/images/background.png.jpeg" alt="Product Name" class="product-image">
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a brief description of the product. It highlights key features and benefits.</p>
+            <span class="product-price">$19.99</span>
+            <button class="buy-button">Order</button>
+        </div>
+    </div>
+</div> *@
+
+
+@* contact *@
+<div class="shadowcontact">
+
+    <div class="contact-container">
+        <div>
+            <div class="contact-address">
+                <h2>KONTAKTA OSS</h2>
+                <h4>Plats</h4><br />
+                <p>
+                    PION blombutiken i Rosendal,
+                    <br> Soldathemsvägen 13,
+                    <br>752 57 Uppsala
+                </p>
+                <h4>Kontaktinformation</h4>
+                <p> 076 00 57 52 0 </p>
+                <p> info@pionblombutiken.se</p>
+
+
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <p>Välkommen att kontakta oss för att få veta mer om priser och de tjänster vi erbjuder. Vi svarar gärna på dina frågor.</p>
+
+            <form>
+                <label for="name">Namn*</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefon">Telefon*</label>
+                <input type="tel" id="telefon" name="telefon" required>
+
+                <label for="message">Meddelande*</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="btn-container">
+                    <a class="btn" href="#">Skicka</a>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
