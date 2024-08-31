@@ -345,22 +345,22 @@
 /*cards*/
 
 .container1 {
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto; /* Centrera container horisontellt */
+    margin: 6rem auto 2rem 14.5rem;
     font-size: 40px;
     font-family: Verdana, Geneva, sans-serif;
     color: #3c3c3c;
     max-width: 90%; /* Anpassa bredden för att vara responsiv */
-    text-align: center; /* Centrera texten inom containern */
+    text-align: left; /* Centrera texten inom containern */
 }
 
 @media (max-width: 1024px) {
     .container1 {
+        text-align: center;
         font-size: 32px; /* Minska textstorleken för större tablets och små desktops */
         margin-left: 1rem;
         margin-right: 1rem; /* Minska marginalerna på mindre skärmar */
-    }
+        margin-bottom:1.5rem;
+        }
 }
 
 @media (max-width: 768px) {
@@ -382,35 +382,34 @@
 }
 
 
-
-
-
-
-
-
-
 /* Galleri */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     justify-content: center;
 }
 
 .gallery-cell {
-    width: calc(25% - 20px); /* Justera procentandel för mindre kort */
+    width: calc(33.33% - 155px);
     box-sizing: border-box;
+    text-decoration: none;
     margin-bottom: 20px;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
 }
 
+    .gallery-cell a {
+        text-decoration: none;
+    }
 
 .img-container {
     width: 100%;
     height: 0;
-    padding-top: 100%; /* Ändra proportionellt för att göra bilden mindre */
+    padding-top: 100%; /* Maintain square aspect ratio */
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(60,60,60,1); /* Kantlinje runt bilderna */
     box-sizing: border-box;
 }
 
@@ -420,24 +419,26 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Behåll proportioner och centrera */
-        transform: translate(-50%, -50%); /* Centrera bilden */
-        }
-  
+        object-fit: cover; /* Keep proportions and center */
+        transform: translate(-50%, -50%); /* Center the image */
+    }
+
 .gallery-caption {
     text-align: left;
-    
     color: #3c3c3c;
-    font-family: Manrope, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: normal;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.8); /* Bakgrundsfärg för läsbarhet */
+    background: rgba(255, 255, 255, 0.8); /* Background color for readability */
     margin-top: 5px;
     box-sizing: border-box;
 }
 
-/* Ljusbox */
+    .gallery-caption span {
+        font-size: 21px;
+    }
+
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -457,12 +458,6 @@
     margin: auto;
     text-align: center;
 }
-
-/* Ensures clicking outside the lightbox content doesn't close the lightbox */
-.lightbox:not(.lightbox-content) {
-    cursor: pointer;
-}
-
 
 .lightbox img {
     max-width: 100%;
@@ -505,125 +500,30 @@
     right: 10px;
 }
 
-/* Responsiv design */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .gallery-cell {
-        width: calc(33.333% - 20px); /* För mindre skärmar, justera bredden */
+        width: calc(33.333% - 50px); 
     }
 }
 
 @media (max-width: 768px) {
     .gallery-cell {
-        width: calc(50% - 20px); /* För små skärmar, justera bredden */
+        width: calc(50% - 60px); 
     }
 }
 
 @media (max-width: 480px) {
     .gallery-cell {
-        width: 100%; /* För mycket små skärmar, gör korten fullbredd */
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
     }
 }
 
 
-
-
-/* Grundläggande stil för galleriet */
-/*.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);*/ /* Tre kolumner */
-   /*justify-content:center;
-    gap: 2rem;*/ /* Avstånd mellan korten */
-    /*padding: 1rem;
-    max-width: 1000px;*/ /* Maximal bredd på galleriet */
-    /*margin: 0 auto;*/ /* Centera galleriet horisontellt */
-/*}*/
-
-/* Grundläggande stil för produktkortet */
-/*.product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 300px;*/ /* Maximal bredd på kortet */
-    /*padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product-image {
-    width: 100%;
-    height: 200px;*/ /* Standardhöjd */
-    /*object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.product-info {
-    text-align: center;
-}
-
-.product-title {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.product-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0.5rem 0;
-}
-
-.product-price {
-    font-size: 1.1rem;
-    color: #000;
-    margin: 0.5rem 0;
-    font-weight: bold;
-}
-
-.buy-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .buy-button:hover {
-        background-color: #0056b3;
-    }*/
-
-/* Responsiv design */
-/*@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);*/ /* Två kolumner på mindre skärmar */
-        /*justify-content: center;
-    }
-
-    .product-card {
-        margin: 0 auto;*/ /* Justera max-bredden för mindre skärmar */
-    /*}
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr; 
-        justify-content: center; 
-    }
-
-    .product-card {
-        margin: 0 auto;
-    }
-}*/
 
 /*contact*/
-
 .shadowcontact {
     margin-top: 50px;
     background-color: rgba(102,115,113,1);
@@ -631,7 +531,6 @@
     border-style: none;
     border-width: 1px 1px 1px 1px;
     min-height: 800px;
-    /*padding-bottom: 100px;*/
 }
 
 .contact-container {
@@ -668,13 +567,13 @@ font-weight:400;
 @media (max-width: 1024px) {
     .contact-container {
         flex-direction: column;
-        align-items: center; /* Centrerar innehållet */
+        align-items: center; 
     }
 
     .contact-address, .contact-form {
-        margin-left: 0; /* Ta bort vänster marginal */
-        max-width: 90%; /* Öka maxbredden */
-        text-align: left; /* Centrera texten */
+        margin-left: 0; 
+        max-width: 90%; 
+        text-align: left; 
     }
 
         .contact-form p {
@@ -682,11 +581,11 @@ font-weight:400;
         }
 
         .contact-address h2, .contact-address h4 {
-            font-size: 1.5rem; /* Justera storleken på rubrikerna */
+            font-size: 1.5rem; 
         }
 
     .contact-form {
-        max-width: 100%; /* Full bredd */
+        max-width: 100%; 
     }
 }
 
@@ -694,61 +593,56 @@ font-weight:400;
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
-        align-items: center; /* Centrerar innehållet */
-        padding: 1rem; /* Mindre padding */
+        align-items: center; 
+        padding: 1rem; 
     }
 
     .contact-address, .contact-form {
-        margin-left: 0; /* Ta bort vänster marginal */
-        max-width: 100%; /* Full bredd */
-        text-align: left; /* Centrera texten */
+        margin-left: 0; 
+        max-width: 100%; 
+        text-align: left;
     }
 
         .contact-address h2, .contact-address h4 {
-            font-size: 1.2rem; /* Justera storleken på rubrikerna */
-            margin-top: 2rem; /* Justera marginaler */
+            font-size: 1.2rem; 
+            margin-top: 2rem; 
         }
 
         .contact-form input, .contact-form textarea {
-            margin-top: 0.5rem; /* Justera avstånd mellan fälten */
+            margin-top: 0.5rem; 
         }
 
         .contact-form button {
-            width: 100%; /* Full bredd på knappen */
+            width: 100%; 
         }
 
     .social-media {
-        gap: 1rem; /* Minska avståndet mellan ikonerna */
-        margin-left: 0; /* Ta bort vänster marginal */
+        gap: 1rem; 
+        margin-left: 0; 
     }
 }
 
 /* För skärmar upp till 480px (små mobiler) */
 @media (max-width: 480px) {
     .contact-address h2, .contact-address h4 {
-        font-size: 1rem; /* Justera storleken på rubrikerna */
+        font-size: 1rem; 
     }
 
     .contact-form input, .contact-form textarea {
-        padding: 0.5rem; /* Justera padding */
+        padding: 0.5rem; 
     }
 
     .contact-form button {
-        padding: 0.8rem; /* Justera padding på knappen */
+        padding: 0.8rem;
     }
 }
-
-
-
-
-
 
 
 /*icones*/
 .social-media {
     display: flex;
-    gap: 2rem; /* Avstånd mellan ikonerna */
-    justify-content: center; /* Centera ikonerna horisontellt */
+    gap: 2rem; 
+    justify-content: center; 
     margin-left: 3rem;
     margin-top: 5rem;
 }
@@ -757,29 +651,25 @@ font-weight:400;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Bredd på ikonen */
-    height: 40px; /* Höjd på ikonen */
-    border-radius: 50%; /* Gör bakgrunden rund */
-    background-color: #fff; /* Vit bakgrund */
-    color: #000; /* Svart ikon */
-    font-size: 18px; /* Storlek på ikonen */
-    text-decoration: none; /* Ta bort understrykning på länken */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    color: #000; 
+    font-size: 18px;
+    text-decoration: none; 
     transition: background-color 0.3s, color 0.3s;
 }
 
-    /*.social-icon:hover {
-        background-color: black;*/ /* Bakgrundsfärg på hover */
-        /*color: #fff;*/ /* Ikonfärg på hover */
-    /*}*/
 
 .facebook {
-    background-color: #fff; /* Facebooks blå färg */
-    color: #000; /* Vit ikon */
+    background-color: #fff; 
+    color: #000; 
 }
 
 .instagram {
-    background-color: #fff; /* Instagrams rosa färg */
-    color: #000; /* Vit ikon */
+    background-color: #fff; 
+    color: #000; 
 }
 
 
@@ -787,38 +677,38 @@ font-weight:400;
 /* För skärmar upp till 1024px (tabletter) */
 @media (max-width: 1024px) {
     .social-media {
-        justify-content: left; /* Centrerar ikonerna horisontellt */
+        justify-content: left; 
         gap:5rem;
-        margin-left: 0; /* Ta bort vänster marginal */
-        margin-top: 2rem; /* Justera avståndet från övrigt innehåll */
+        margin-left: 0; 
+        margin-top: 2rem; 
     }
 }
 
 /* För skärmar upp till 768px (mobiler) */
 @media (max-width: 768px) {
     .social-media {
-        justify-content: left; /* Centrerar ikonerna horisontellt */
-        margin-top: 1rem; /* Justera avståndet från övrigt innehåll */
+        justify-content: left;
+        margin-top: 1rem; 
     }
 
     .social-icon {
-        width: 30px; /* Minska bredden på ikonerna */
-        height: 30px; /* Minska höjden på ikonerna */
-        font-size: 16px; /* Minska storleken på ikonerna */
+        width: 30px; 
+        height: 30px; 
+        font-size: 16px; 
     }
 }
 
 /* För skärmar upp till 480px (små mobiler) */
 @media (max-width: 480px) {
     .social-media {
-        justify-content: left; /* Centrerar ikonerna horisontellt */
-        margin-top: 0.5rem; /* Justera avståndet från övrigt innehåll */
+        justify-content: left; 
+        margin-top: 0.5rem; 
     }
 
     .social-icon {
-        width: 25px; /* Ytterligare minska bredden på ikonerna */
-        height: 25px; /* Ytterligare minska höjden på ikonerna */
-        font-size: 14px; /* Ytterligare minska storleken på ikonerna */
+        width: 25px; 
+        height: 25px; 
+        font-size: 14px; 
     }
 }
 
@@ -828,7 +718,7 @@ font-weight:400;
 /*form*/
 
 .contact-form {
-    max-width: 470px; /* Maximal bredd på formen */
+    max-width: 470px; 
 }
     .contact-form p {
         padding-top:5rem;
@@ -838,21 +728,21 @@ font-weight:400;
     .contact-form form {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centrerar formulärets innehåll horisontellt */
+        align-items: center; 
     }
 
     .contact-form label {
-        align-self: flex-start; /* Justerar etiketter till vänster */
+        align-self: flex-start; 
         margin-top: 0.5rem;
-        width: 100%; /* Gör etiketten lika bred som formfälten */
+        width: 100%; 
     }
 
     .contact-form input, .contact-form textarea {
-        width: 100%; /* Gör input-fälten lika breda som formen */
+        width: 100%; 
         margin-top: 1rem;
         padding: 0.1rem;
         border: 1px solid #ddd;
-        /*border-radius: 4px;*/
+        
     }
 
     .contact-form button {
@@ -877,20 +767,20 @@ font-weight:400;
 .btn {
     display: inline-block;
     padding: 0.2rem 1rem;
-    color: #fff; /* Vit textfärg */
-    background-color: transparent; /* Ingen bakgrundsfärg */
-    border: 1px solid #fff; /* Vit kantlinje */
+    color: #fff; 
+    background-color: transparent; 
+    border: 1px solid #fff; 
     text-align: center;
     border-radius: 0;
-    text-decoration: none; /* Ingen understrykning */
+    text-decoration: none; 
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 0.5rem;
 }
 
     .btn:hover {
-        background-color: gray; /* Grå bakgrundsfärg vid hover */
-        color: #fff; /* Behåll vit textfärg */
+        background-color: gray; 
+        color: #fff; 
     }
 
 
